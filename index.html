@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For You ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffd6e7;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+
+    .emoji {
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 12px 28px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    #yes {
+      background: #ff4d88;
+      color: white;
+      margin-right: 10px;
+    }
+
+    #no {
+      background: #ddd;
+      position: absolute;
+    }
+
+    .buttons {
+      position: relative;
+      height: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="emoji">🐱💖</div>
+    <h1>Ishita!! 💖😘</h1>
+    <h2>Will you be my Valentine?</h2>
+    <div class="buttons">
+      <button id="yes">Yes</button>
+      <button id="no">No</button>
+    </div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * 200 - 100;
+      const y = Math.random() * 200 - 100;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    yesBtn.addEventListener("click", () => {
+      document.body.innerHTML = `
+        <div style="
+          display:flex;
+          flex-direction:column;
+          justify-content:center;
+          align-items:center;
+          height:100vh;
+          background:#ffd6e7;
+          font-family:Segoe UI;
+          text-align:center;
+        ">
+          <h1>YAYYY 💕🥰</h1>
+          <h2>I love you so much❤️</h2>
+          <p>You just made me the happiest person ❤️</p>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>
